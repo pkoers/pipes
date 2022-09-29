@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  miles!: number;
   name = '';
   date = '';
   amount = 0;
@@ -16,6 +17,10 @@ export class AppComponent {
     model: 'Camri',
     year: 2000
   };
+
+  onMilesChange(value: string) {
+    this.miles = parseFloat(value);
+  }
 
   onHeightChange(value: string) {
     this.height = parseFloat(value);
